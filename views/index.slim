@@ -1,0 +1,9 @@
+h1 Pages
+- if @pages.any?
+  ul.pages
+  - @pages.each do |page|
+    == slim :page, locals: {page: page}
+- else
+ p No pages here!
+
+a href='/pages/new' Add a new page
